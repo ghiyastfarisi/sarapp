@@ -1,1 +1,1 @@
-docker build -t democi:v1 -f Dockerfile .
+docker build -t sarapp:v1 -f Dockerfile .
