@@ -1,0 +1,31 @@
+version : '3'
+services:
+  tomatom-nginx:
+    container_name: tomatom-nginx
+    image: nginx:latest
+    restart: always
+    networks:
+      - app-tier
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ./log/nginx:/var/log/nginx
+      - ./conf/dev/site.conf:/etc/nginx/conf.d/default.conf
+      - ./datadir/devwww/nginx:/var/www/html
+      # ---- PRODUCTION CONFIG ----
+      # - /etc/private:/etc/private
+      # - ./conf/production/site.conf:/etc/nginx/conf.d/default.conf
+      # - ./datadir/www/nginx:/var/www/html
+      # - ./log/nginx:/var/log/nginx
+    links:
+      - 'tomatom-web-cms'
+  tomatom-web-cms:
+    container_name: tomatom-web-cms
+    image: sarapp:v1
+    restart: always
+    networks:
+      - app-tier
+networks:
+  app-tier:
+    driver: bridge
