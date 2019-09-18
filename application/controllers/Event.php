@@ -26,11 +26,11 @@ class Event extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();
-		$this->tools->_restrict_not_loggin();
 		$this->load->model('EventModel');
 	}
 
 	public function index() {
+		$this->tools->_restrict_not_loggin();
 		$data['include_css'] = $this->datatables_css;
 		$data['include_js'] = array_merge(
 			$this->datatables_js,
@@ -48,6 +48,7 @@ class Event extends CI_Controller {
 	}
 
 	function form() {
+		$this->tools->_restrict_not_loggin();
 		$notif = $this->tools->_read_notification();
 		$data['include_css'] = array(
 			'template/metrical/assets/plugins/datepicker/css/datepicker.min.css'
@@ -155,6 +156,7 @@ class Event extends CI_Controller {
 	}
 
 	function add_event() {
+		$this->tools->_restrict_not_loggin();
 		$method = $this->input->method();
 		$post = $this->input->post();
 		if (NULL===$method) {
