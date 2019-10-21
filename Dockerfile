@@ -4,7 +4,7 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get update && apt-get install -y \
 		nodejs \
 	--no-install-recommends && rm -r /var/lib/apt/lists/*
-RUN npm install --global yarn && yarn global add parcel-bundler --network-timeout 100000
+RUN npm install --global yarn && npm install --global parcel-bundler
 WORKDIR /var/www/html
 COPY . ./
 RUN usermod -u 1000 www-data \
