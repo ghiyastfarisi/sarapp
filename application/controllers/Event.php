@@ -178,7 +178,7 @@ class Event extends CI_Controller {
 				<a href="'.base_url('/event/form/'.$data[$i]['id']).'" class="btn btn-xs btn-warning">
 					<i class="fa fa-edit"></i>
 				</a>
-				<button data-delete-url="'.base_url('event/delete_event/'.$data[$i]['id']).'" data-delete-id="'.$data[$i]['id'].'" class="btn btn-xs btn-danger confirm-delete-data">
+				<button data-delete-url="event/delete_event/'.$data[$i]['id'].'" data-delete-id="'.$data[$i]['id'].'" class="btn btn-xs btn-danger confirm-delete-data">
 					<i class="fa fa-remove"></i>
 				</button>
 			';
