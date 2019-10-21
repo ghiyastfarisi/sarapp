@@ -8,13 +8,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-	<meta content="Democi" name="description" />
+	<meta content="Hallovent" name="description" />
 	<meta content="Moeghifar" name="author" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
 	<link rel="icon" href="/asset/static/gf-favicon.png">
 
-	<title>Democi - moeghifar</title>
+	<title>Hallovent - moeghifar</title>
 	<?php
 		$base_css = array(
 			"template/metrical/assets/plugins/bootstrap/css/bootstrap.min.css",
@@ -54,10 +54,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		"template/metrical/assets/plugins/pace/pace.min.js",
 		"template/metrical/assets/plugins/toastr/toastr.min.js",
 		"template/metrical/assets/plugins/simpler-sidebar/jquery.simpler-sidebar.min.js",
+		"template/metrical/assets/plugins/modal/bootbox.js",
 		"template/metrical/assets/js/jquery.slimscroll.min.js",
 		"template/metrical/assets/js/highlight.min.js",
 		"template/metrical/assets/js/app.js",
-		"template/metrical/assets/js/custom.js"
+		"template/metrical/assets/js/custom.js",
+		"@/lib/main.js"
 	);
 	$data['include_js'] = (isset($include_js)) ? array_merge($base_js, $include_js) : $base_js;
 	$this->load->view('builder/js',  $data);

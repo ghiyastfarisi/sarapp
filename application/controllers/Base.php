@@ -12,6 +12,9 @@ class Base extends CI_Controller {
 	}
 
 	public function index() {
+		$notif = $this->tools->_read_notification();
+		$data['passNotif']		= (isset($notif['notif'])) ? $notif['notif'] : '';
+		$data['passNotifType']	= (isset($notif['notif-type'])) ? $notif['notif-type'] : '';
 		$data['builder'] = 'metrical';
 		if (isset($this->SESSION['logged_in'])) {
 			$data['page'] = 'index';
@@ -33,7 +36,8 @@ class Base extends CI_Controller {
 		}
 		$data = $this->AuthModel->_get_user_by_email($post['email']);
 		if (count($data) == 0 || !$this->_check_password($post['password'], $data[0]['password'])) {
-			return false;
+			$this->tools->_create_notification('Invalid Email or Password', 'error');
+			redirect();
 		}
 		$this->tools->_set_session(array(
 			'logged_in' => true,

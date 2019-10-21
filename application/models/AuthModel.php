@@ -19,4 +19,13 @@ class AuthModel extends CI_Model {
             ->query("SELECT * FROM tbl_user WHERE email = '$email' AND ( deleted_at != '0000-00-00' OR deleted_at IS NULL ) ")
             ->result_array();
     }
+    function _get_user_by_id($id) {
+        return $this->db
+            ->query("SELECT * FROM tbl_user WHERE id = '$id' AND ( deleted_at != '0000-00-00' OR deleted_at IS NULL ) ")
+            ->result_array();
+    }
+    function _update_profile($id, $data) {
+        $this->db->where('id', $id);
+        return $this->db->update('tbl_user', $data);
+    }
 }

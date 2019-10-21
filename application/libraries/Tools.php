@@ -26,7 +26,7 @@ class Tools {
         return $this->CI->session->sess_destroy();
     }
 
-    public function _restrict_not_loggin() {
+    public function _restrict_not_logged_in() {
         $session = $this->CI->session->userdata();
         if (!isset($session['logged_in'])) {
             redirect();
