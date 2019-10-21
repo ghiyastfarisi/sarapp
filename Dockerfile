@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y \
 		nodejs \
 	--no-install-recommends && rm -r /var/lib/apt/lists/*
 RUN npm install --global yarn && yarn install
+RUN yarn build
 WORKDIR /var/www/html
 COPY . ./
 RUN usermod -u 1000 www-data \
