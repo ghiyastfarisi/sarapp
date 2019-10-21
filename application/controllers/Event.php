@@ -172,13 +172,13 @@ class Event extends CI_Controller {
 			$data[$i]['image_url'] = $this->_format_image_url($data[$i]['image_url']);
 			$data[$i]['ordered'] = $order;
 			$data[$i]['action'] = '
-				<a href="/event/detail/'.$data[$i]['id'].'" class="btn btn-xs btn-info">
+				<a href="'.base_url('/event/detail/'.$data[$i]['id']).'" class="btn btn-xs btn-info">
 					<i class="fa fa-eye"></i>
 				</a>
-				<a href="/event/form/'.$data[$i]['id'].'" class="btn btn-xs btn-warning">
+				<a href="'.base_url('/event/form/'.$data[$i]['id']).'" class="btn btn-xs btn-warning">
 					<i class="fa fa-edit"></i>
 				</a>
-				<button data-delete-url="event/delete_event/" data-delete-id="'.$data[$i]['id'].'" class="btn btn-xs btn-danger confirm-delete-data">
+				<button data-delete-url="'.base_url('event/delete_event/'.$data[$i]['id']).'" data-delete-id="'.$data[$i]['id'].'" class="btn btn-xs btn-danger confirm-delete-data">
 					<i class="fa fa-remove"></i>
 				</button>
 			';
