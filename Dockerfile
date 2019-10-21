@@ -4,7 +4,7 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get update && apt-get install -y \
 		nodejs \
 	--no-install-recommends && rm -r /var/lib/apt/lists/*
-RUN npm install --global yarn
+RUN npm install --global yarn && yarn global add parcel-bundler
 WORKDIR /var/www/html
 COPY . ./
 RUN usermod -u 1000 www-data \
@@ -13,6 +13,5 @@ RUN usermod -u 1000 www-data \
 	# && chmod -R +x /var/www/html/*/file \
 	&& docker-php-ext-install -j$(nproc) mysqli \
 	&& a2enmod rewrite \
-	&& yarn install \
 	&& yarn build
 EXPOSE 80
