@@ -120,7 +120,7 @@ class Event extends CI_Controller {
                     'skip' => isset($get['page']) && intval($get['page']) > 0 ? (intval($get['page']) - 1) : 0,
                     'limit' => isset($get['show']) ? intval($get['show']) : 10,
                 );
-				$data = $this->_event_list_transform($this->EventModel->_get_event($qs));
+				$data = $this->_event_list_transform($this->EventModel->_get_event_active($qs));
 				$apiResponse['attribute'] = $qs;
 				$apiResponse['data'] = $data;
 				break;
