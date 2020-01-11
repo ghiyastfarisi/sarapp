@@ -28,4 +28,7 @@ class AuthModel extends CI_Model {
         $this->db->where('id', $id);
         return $this->db->update('tbl_user', $data);
     }
+    function _insert($insert_data) {
+        return $this->db->insert('tbl_user', $insert_data);
+    }
 }

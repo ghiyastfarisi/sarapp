@@ -1,7 +1,7 @@
 <div class="row row-xs clearfix">
     <div class="col-md-2 col-lg-2">
         <a href="<?php echo base_url('event/form'); ?>" class="btn btn-primary btn-block mg-b-10">
-            <i class="fa fa-send mg-r-10"></i> Create New Event
+            <i class="fa fa-send mg-r-10"></i> Buat Event Baru
         </a>
     </div>
     <div class="col-md-12 col-lg-12">
@@ -22,11 +22,11 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Image</th>
-                            <th>Title</th>
-                            <th>Location</th>
-                            <th>Date</th>
-                            <th>action</th>
+                            <th>Gambar</th>
+                            <th>Judul</th>
+                            <th>Lokasi</th>
+                            <th>Tanggal</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>

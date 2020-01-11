@@ -25,25 +25,25 @@
                         <div class="col-lg-6">
                             <div class="col-lg-12">
                                 <div class="form-group">
-                                    <label class="form-control-label active">Title<span class="tx-danger">*</span></label>
+                                    <label class="form-control-label active">Judul<span class="tx-danger">*</span></label>
                                     <input <?php if ($state === 'edit') echo 'value="'.$event[0]['title'].'"'; ?> class="form-control" type="text" name="title" placeholder="Title" required>
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="form-group">
-                                    <label class="form-control-label active">Location<span class="tx-danger">*</span></label>
+                                    <label class="form-control-label active">Lokasi<span class="tx-danger">*</span></label>
                                     <input <?php if ($state === 'edit') echo 'value="'.$event[0]['location_name'].'"'; ?> class="form-control" type="text" name="location" placeholder="Location" required>
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="form-group">
-                                    <label class="form-control-label active">Date<span class="tx-danger">*</span></label>
+                                    <label class="form-control-label active">Tanggal<span class="tx-danger">*</span></label>
                                     <input <?php if ($state === 'edit') echo 'value="'.$parsedDate.'"'; ?> type='text' name="date" class="form-control datepicker-here" placeholder="Select Date" data-date-format="dd-mm-yyyy"/>
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="form-group">
-                                    <label class="form-control-label active">Caption<span class="tx-danger">*</span></label>
+                                    <label class="form-control-label active">Keterangan<span class="tx-danger">*</span></label>
                                     <textarea class="form-control" name="caption" style="height:120px"><?php if ($state === 'edit') echo $event[0]['caption']; ?></textarea>
                                 </div>
                             </div>

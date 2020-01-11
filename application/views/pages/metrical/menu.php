@@ -15,12 +15,12 @@
                         <span>Event</span>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                 <a href="<?php echo base_url('/user'); ?>">
                         <i data-feather="user"></i>
                         <span>User</span>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="<?php echo base_url('/setting'); ?>">
                         <i data-feather="settings"></i>

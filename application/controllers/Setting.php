@@ -35,7 +35,7 @@ class Setting extends CI_Controller {
 		}
 		$id = $this->SESSION['user_id'];
 		$saveData = array(
-			'username' => $post['username'],
+			'nama_lengkap' => $post['nama_lengkap'],
 			'email' => $post['email'],
 			'updated_at'  => date('Y-m-d H:i:s')
 		);
@@ -45,8 +45,8 @@ class Setting extends CI_Controller {
 
 		$this->AuthModel->_update_profile($id, $saveData);
 		$this->tools->_create_notification('Update profile success','success');
-		if ($post['email'] || $post['password']) {
-			redirect(site_url('logout'));
+		if ($post['password']) {
+			redirect(site_url('base/logout'));
 		} else {
 			redirect(site_url('setting'));
 		}

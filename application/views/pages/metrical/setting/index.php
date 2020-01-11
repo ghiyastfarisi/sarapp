@@ -25,13 +25,13 @@
                             <div class="col-lg-12">
                                 <div class="form-group">
                                     <label class="form-control-label active">Password<span class="tx-danger" style="font-size:70%"> *isi jika ingin update password</span></label>
-                                    <input value="" class="form-control" type="password" name="password" placeholder="Password" required>
+                                    <input value="" class="form-control" type="password" name="password" placeholder="Password" >
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="form-group">
-                                    <label class="form-control-label active">Username</label>
-                                    <input value="<?php echo $user[0]['username']; ?>" class="form-control" type="text" name="username" placeholder="Email" required>
+                                    <label class="form-control-label active">Nama Lengkap</label>
+                                    <input value="<?php echo $user[0]['nama_lengkap']; ?>" class="form-control" type="text" name="nama_lengkap" placeholder="nama lengkap" required>
                                 </div>
                             </div>
                         </div>

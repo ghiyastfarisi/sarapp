@@ -4,30 +4,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class User extends CI_Controller {
 
 	public $direct_datatables_css_include = array(
-		"/template/upbound/plugins/datatables/jquery.dataTables.min.css",
-		"/template/upbound/plugins/datatables/buttons.bootstrap.min.css",
-		"/template/upbound/plugins/datatables/fixedHeader.bootstrap.min.css",
-		"/template/upbound/plugins/datatables/responsive.bootstrap.min.css",
-		"/template/upbound/plugins/datatables/dataTables.bootstrap.min.css",
-		"/template/upbound/plugins/datatables/scroller.bootstrap.min.css"
+		"template/metrical/assets/plugins/datatables/jquery.dataTables.min.css",
+		"template/metrical/assets/plugins/datatables/buttons.bootstrap.min.css",
+		"template/metrical/assets/plugins/datatables/fixedHeader.bootstrap.min.css",
+		"template/metrical/assets/plugins/datatables/responsive.bootstrap.min.css",
+		"template/metrical/assets/plugins/datatables/dataTables.bootstrap.min.css",
+		"template/metrical/assets/plugins/datatables/scroller.bootstrap.min.css"
 	);
 
 	public $direct_datatables_js_include = array(
-		"/template/upbound/plugins/datatables/jquery.dataTables.min.js",
-		"/template/upbound/plugins/datatables/dataTables.bootstrap.js",
-		"/template/upbound/plugins/datatables/dataTables.buttons.min.js",
-		"/template/upbound/plugins/datatables/buttons.bootstrap.min.js",
-		"/template/upbound/plugins/datatables/jszip.min.js",
-		"/template/upbound/plugins/datatables/pdfmake.min.js",
-		"/template/upbound/plugins/datatables/vfs_fonts.js",
-		"/template/upbound/plugins/datatables/buttons.html5.min.js",
-		"/template/upbound/plugins/datatables/buttons.print.min.js",
-		"/template/upbound/plugins/datatables/dataTables.fixedHeader.min.js",
-		"/template/upbound/plugins/datatables/dataTables.keyTable.min.js",
-		"/template/upbound/plugins/datatables/dataTables.responsive.min.js",
-		"/template/upbound/plugins/datatables/responsive.bootstrap.min.js",
-		"/template/upbound/plugins/datatables/dataTables.scroller.min.js",
-		"/template/upbound/pages/datatables.init.js"
+		"/template/metrical/assets/plugins/datatables/jquery.dataTables.min.js",
+		"/template/metrical/assets/plugins/datatables/dataTables.bootstrap.js",
+		"/template/metrical/assets/plugins/datatables/dataTables.buttons.min.js",
+		"/template/metrical/assets/plugins/datatables/buttons.bootstrap.min.js",
+		"/template/metrical/assets/plugins/datatables/jszip.min.js",
+		"/template/metrical/assets/plugins/datatables/pdfmake.min.js",
+		"/template/metrical/assets/plugins/datatables/vfs_fonts.js",
+		"/template/metrical/assets/plugins/datatables/buttons.html5.min.js",
+		"/template/metrical/assets/plugins/datatables/buttons.print.min.js",
+		"/template/metrical/assets/plugins/datatables/dataTables.fixedHeader.min.js",
+		"/template/metrical/assets/plugins/datatables/dataTables.keyTable.min.js",
+		"/template/metrical/assets/plugins/datatables/dataTables.responsive.min.js",
+		"/template/metrical/assets/plugins/datatables/responsive.bootstrap.min.js",
+		"/template/metrical/assets/plugins/datatables/dataTables.scroller.min.js",
+		"/template/metrical/pages/datatables.init.js"
 	);
 
 	public function index() {

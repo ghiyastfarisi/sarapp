@@ -4,9 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
-$host = '172.17.0.1';
+$host = 'localhost';
 $user = 'root';
-$pass = 'myRoot';
+$pass = '';
 
 if (ENVIRONMENT === 'production') {
 	$host = '172.17.0.1';
@@ -19,7 +19,7 @@ $db['default'] = array(
 	'hostname' => $host,
 	'username' => $user,
 	'password' => $pass,
-	'database' => 'db_sarapp',
+	'database' => 'db_hallovent',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

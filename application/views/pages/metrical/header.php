@@ -9,7 +9,7 @@
             <ul class="list-inline justify-content-end">
                 <li class="list-inline-item align-middle"></li>
                 <li class="list-inline-item dropdown">
-                    <span class="select-profile">Hi, Admin</span><img src="assets/images/avatar-placeholder.png"" class="img-fluid wd-35 ht-35 rounded-circle" alt="">
+                    <span class="select-profile">Hi, <?php echo $this->session->userdata("nama_lengkap");?></span><img src="assets/images/avatar-placeholder.png"" class="img-fluid wd-35 ht-35 rounded-circle" alt="">
                 </li>
             </ul>
         </div>
