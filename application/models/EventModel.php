@@ -10,6 +10,14 @@ class EventModel extends CI_Model {
             ->result_array();
     }
 
+    function _get_event_active($qs) {
+        $skip = $qs['skip'] * $qs['limit'];
+        $limit = $qs['limit'];
+        return $this->db
+            ->query("SELECT * FROM tbl_event WHERE date >= NOW() AND ( deleted_at != '0000-00-00' OR deleted_at IS NULL ) ORDER BY id DESC LIMIT $skip, $limit ")
+            ->result_array();
+    }
+
     function _get_event_by_id($id) {
         return $this->db
             ->query("SELECT * FROM tbl_event WHERE id = ? AND ( deleted_at != '0000-00-00' OR deleted_at IS NULL )", array($id))
