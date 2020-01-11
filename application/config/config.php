@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 if (ENVIRONMENT !== 'production') {
 	$config['base_url'] = 'http://localhost/sarapp';
 } else {
-	$config['base_url'] = 'http://lejendindustry.com/admin-panel';
+	$config['base_url'] = 'http://lejendindustry.com';
 }
 
 /*
