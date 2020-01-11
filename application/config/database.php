@@ -9,9 +9,9 @@ $user = 'root';
 $pass = '';
 
 if (ENVIRONMENT === 'production') {
-	$host = '172.17.0.1';
+	$host = 'mariadb-local';
 	$user = 'root';
-	$pass = 'example';
+	$pass = 'Example2020Example2020';
 }
 
 $db['default'] = array(
