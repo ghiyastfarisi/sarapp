@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<link rel="icon" href="/asset/static/gf-favicon.png">
 
-	<title>Hallovent - moeghifar</title>
+	<title>Hallovent</title>
 	<?php
 		$base_css = array(
 			"template/metrical/assets/plugins/bootstrap/css/bootstrap.min.css",
